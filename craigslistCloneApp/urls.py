@@ -17,6 +17,6 @@ Including another URLconf
 from django.urls import path
 from . import views
 urlpatterns = [
-    path('', views.home, name='home'),path('home/', views.home, name='home'),
-    path('newSearch/', views.newSearch, name='newSearch')
+    path('', views.home, name='home'),path('home', views.home, name='home'),
+    path('new-search', views.new_search, name='new-search')
 ]
