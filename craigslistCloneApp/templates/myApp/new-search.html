@@ -1,39 +1,25 @@
 {% extends 'base.html' %}
-<style>
-    .card {
-        height: 400px;
-        overflow: hidden;
-    }
-
-    .card-image {
-        height: 250px;
-        overflow: hidden;
-    }
-</style>
 {% block content %}
 
 <h2 style="text-align: center;">Results of - {{search|title}}</h2>
 <div class="row">
     {% for post in final_postings %}
-    <div class="col s4">
-        <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-                <a href="{{post.1}}"><img class="activator" src="{{post.3}}"></a>
+    <div class="col sm-6">
+        <div class="card" style="height: 400px; width: 400px; overflow: hidden;">
+            <div class="card-image" style="height: 250px; overflow: hidden;">
+                <a href="{{post.1}}"><img src="{{post.3}}"></a>
+                <span class="card-title">{{post.0}}</span>
             </div>
             <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">{{post.0}}<i
-                        class="material-icons right">more_vert</i></span>
+                <p>View Listing Price: {{post.2}}</p>
             </div>
-            <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">{{post.0}}<i
-                        class="material-icons right">close</i></span>
-                <p> <a href="{{post.1}}">View Listing Price: {{post.2}} </a> </p>
+            <div class="card-action">
+                <a href="{{post.1}}">More Info</a>
             </div>
         </div>
     </div>
     {% endfor %}
 </div>
-
 {% endblock%}
 
 
