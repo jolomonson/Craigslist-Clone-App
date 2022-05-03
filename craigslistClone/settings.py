@@ -28,6 +28,8 @@ SECRET_KEY = 'yftem%19wm)dpsm(z_=a_1-h!3l(9klzz5p#43yztaz_mfje%*'
 DEBUG = True
 
 #ALLOWED_HOSTS = []
+#Heroku Deployment
+#Comment 33 for local deployment and uncomment 30
 ALLOWED_HOSTS = ['craigslistcloneapp.herokuapp.com']
 
 # Application definition
@@ -45,6 +47,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    #Heroku Deployment
+    #Comment for 50 local deployment
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -119,6 +123,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+#Heroku Deployment
+#Comment for 125 - 147 local deployment
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
@@ -139,7 +145,6 @@ STATICFILES_DIRS = (
 
 #  Add configuration for static files storage using whitenoise
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-
 
 import dj_database_url 
 prod_db  =  dj_database_url.config(conn_max_age=500)
