@@ -2,7 +2,7 @@
 An application similar to [Craigslist](https://losangeles.craigslist.org/) that gives users the ability to easily identify and understand the results of their searches displaying it in a more interactive and appeasing manner.
 
 # Deployed App (Production mode):
-https://craigslistcloneapp.herokuapp.com/
+N/A
 # Local Server (Development mode):
 http://127.0.0.1:8000/
 # Application Setup
